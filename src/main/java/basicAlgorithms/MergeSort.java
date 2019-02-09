@@ -51,5 +51,5 @@ public class MergeSort {
         System.out.println("-----------------병합 정렬 수행 시작------------------");
         mergeSort(list, 0, size-1);
     }
-    
+
 }
