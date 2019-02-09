@@ -2,7 +2,7 @@ package basicAlgorithms;
 
 public class Test {
     public static void main(String[] args) {
-        //integer 타입의 데이터를 사용한다. 
+        //integer 타입의 데이터를 사용한다.
         Stack<Integer> s = new Stack<Integer>();
         s.push(1);
         s.push(2);
