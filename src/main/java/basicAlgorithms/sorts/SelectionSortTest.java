@@ -1,4 +1,4 @@
-package basicAlgorithms;
+package basicAlgorithms.sorts;
 
 public class SelectionSortTest {
     private static void selectionSort(int[] arr){// 함수를 선언하고 배열을 인자로 받는다.
