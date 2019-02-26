@@ -44,7 +44,6 @@ class Tree{
             inorder(node.left); //왼쪽 재귀호출을 다 돌고 오면
             System.out.println(node.data);// 나 자신을 출력
             inorder(node.right);// 오른쪽 재귀호출을 돌린다.
-
         }
 
     }
