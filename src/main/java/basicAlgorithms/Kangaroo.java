@@ -13,7 +13,7 @@ import java.util.regex.*;
 public class Kangaroo {
 
     // Complete the kangaroo function below.
-    static String kangaroo(int x1, int v1, int x2, int v2) {
+    public  static String kangarooo(int x1, int v1, int x2, int v2) {
         String result = null;
         float a = (float)(x1-x2)/(float)(v2-v1);
 
@@ -40,7 +40,7 @@ public class Kangaroo {
 
         int v2 = Integer.parseInt(x1V1X2V2[3]);
 
-        String result = kangaroo(x1, v1, x2, v2);
+        String result = kangarooo(x1, v1, x2, v2);
 
         bufferedWriter.write(result);
         bufferedWriter.newLine();
