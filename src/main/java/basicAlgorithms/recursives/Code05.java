@@ -58,6 +58,6 @@ public class Code05 {
             int max2 = findMax2(data, middle+1, end);
             return Math.max(max1, max2);
         }
-            
+
     }
 }
