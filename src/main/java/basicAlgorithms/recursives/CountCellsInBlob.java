@@ -43,7 +43,7 @@ public class CountCellsInBlob {
 
     public static void main(String[] args) {
         printGrid();
-        int result = countCells(0,0);
+        int result = countCells(6,4);
         System.out.println(result);
     }
 
