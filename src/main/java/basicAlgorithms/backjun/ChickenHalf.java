@@ -1,6 +1,9 @@
 package basicAlgorithms.backjun;
 
-public class ChickenHalf {
+import java.io.*;
+import java.util.*;
+
+public class ChickenHalf{
     public static int chicken(int A, int B, int C, int X, int Y){
         int result = 0;
         if(X == 0){
@@ -19,7 +22,7 @@ public class ChickenHalf {
             else if(X > Y) {
                 result = (2 * Y * C) + A * (X - Y);
             }else
-            result = (2 *X * C) + B*(Y-X);
+                result = (2 *X * C) + B*(Y-X);
         }else{
             result = A*X + B*Y ;
         }
@@ -27,7 +30,21 @@ public class ChickenHalf {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(chicken(15, 20, 5, 900, 1000));
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        int[] arr = new int[5];
+        for(int i=0; i<arr.length; i++){
+            arr[i] = scanner.nextInt();
+        }
+        scanner.close();
+
+        int a = arr[0];
+        int b = arr[1];
+        int c = arr[2];
+        int x = arr[3];
+        int y = arr[4];
+
+        System.out.println(chicken(a,b,c,x,y));
     }
 }
