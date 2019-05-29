@@ -17,13 +17,21 @@ public class Sportwear {
         }
         for(int i=0; i<reserve.length; i++){
             if(hm.containsKey(reserve[i])){
-                hm.put(reserve[i], hm.get(reserve[i])+1 )
+                hm.put(reserve[i], hm.get(reserve[i])+1 );
             }
         }
 
         for(Map.Entry<Integer,Integer> result : hm.entrySet()){
             answer += result.getValue();
         }
+        return answer;
+    }
+
+    public int solution2(int n , int[] lost, int[] reserve){
+        int answer = 0;
+
+
+
         return answer;
     }
 
