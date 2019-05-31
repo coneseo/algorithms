@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 public class RamenFactory {
     public static void main(String[] args) {
         int stock = 4;
-        int[] dates = {4,10,15};
+        int[] dates = {7,12,23};
         int[] supplies = {20,5,10};
         int k = 30;
         int result = solution(stock, dates, supplies,k);
