@@ -1,4 +1,7 @@
 package basicAlgorithms.programmers;
+
+import java.util.HashMap;
+
 /*
 암호문을 좋아하는 괴짜 개발자 브라운이 이번에는 중복 문자를 이용한 새로운 암호를 만들었습니다.
 예를 들어 browoanoommnaon이라는 암호문은 다음과 같은 순서로 해독할 수 있습니다.
@@ -12,8 +15,13 @@ package basicAlgorithms.programmers;
 
  */
 public class Cryptogram {
-    public String solution(String crptogram){
+    public String solution(String cryptogram){
         String answer = "";
+        //문자열 배열로 바꿔서
+        //연속으로 같은 문자열이 있으면 제거하는데,
+        //while문을 돌려서 중복되는 숫자가 없을 때까지라는 조건을 걸어주면 되겠다.
+        String[] temp = null;
+
 
         return answer;
     }
