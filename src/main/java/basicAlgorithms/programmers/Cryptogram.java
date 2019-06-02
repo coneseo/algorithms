@@ -28,6 +28,7 @@ public class Cryptogram {
         List<String> list = Arrays.asList(temp);
         boolean isGood = true;
         int check = 0;
+
         while(isGood) {
             for (int i = 0; i < list.size() - 1; i++) {
                 if (list.get(i).equals(list.get(i + 1))) {
