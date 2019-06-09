@@ -23,5 +23,4 @@ public class Phonekemon {
         }
         else return size;
     }
-
 }
