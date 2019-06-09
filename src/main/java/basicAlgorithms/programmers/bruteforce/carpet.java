@@ -2,7 +2,7 @@ package basicAlgorithms.programmers.bruteforce;
 
 public class carpet {
     public static void main(String[] args) {
-
+        System.out.println(solution(10, 2));
     }
     public static int[] solution(int brown, int red){
         int total = brown + red;
