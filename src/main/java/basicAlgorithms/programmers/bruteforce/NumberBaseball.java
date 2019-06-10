@@ -30,7 +30,7 @@ public class NumberBaseball {
             if (flag) {
                 temp.add(num);
             }
-            flag =true; 
+            flag =true;
         }
         return temp.size();
     }
