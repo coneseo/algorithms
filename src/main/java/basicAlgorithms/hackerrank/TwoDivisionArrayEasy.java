@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+
 /*
 이차원 배열(6x6)을 입력 받아서 i모양의 모레시계를 가져다대서
 그 모양대로 있는 인덱스들의 최대값을 리턴하는 알고리즘
@@ -12,11 +13,11 @@ public class TwoDivisionArrayEasy {
     // Complete the hourglassSum function below.
     static int hourglassSum(int[][] arr) {
         int sum = -2147483648;
-        for(int i=0;i<4; i++){
-            for(int j=0; j<4; j++){
-                int temp = arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1]
-                        +arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2] ;
-                if(temp > sum){
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                int temp = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1]
+                        + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+                if (temp > sum) {
                     sum = temp;
                 }
             }

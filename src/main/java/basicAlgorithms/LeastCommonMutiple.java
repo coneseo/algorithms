@@ -4,11 +4,12 @@ import java.util.Arrays;
 
 public class LeastCommonMutiple {
     public static void main(String[] args) {
-        int[] arr = {2,6,8,14};
+        int[] arr = {2, 6, 8, 14};
         int result = solution(arr);
         System.out.println(result);
     }
-//    public static int solution(int[] arr) {
+
+    //    public static int solution(int[] arr) {
 //        int answer = 0;
 //
 //        Arrays.sort(arr);
@@ -32,36 +33,36 @@ public class LeastCommonMutiple {
 //        }
 //        return answer;
 //    }
-    public static int solution(int[] arr){
+    public static int solution(int[] arr) {
         int answer = 0;
 
         int gcd = gcdlm(arr[0], arr[1]);
 
-        for(int i=2; i<arr.length; i++){
+        for (int i = 2; i < arr.length; i++) {
             gcd = gcdlm(gcd, arr[i]);
         }
 
         return gcd;
     }
 
-    public static int gcdlm(int a, int b){
+    public static int gcdlm(int a, int b) {
         int answer = 0;
 
-        int big, small ;
+        int big, small;
         int remain = 1;
-        if(a >= b){
+        if (a >= b) {
             big = a;
             small = b;
-        }else{
+        } else {
             big = b;
             small = a;
         }
-        while(remain>0){
-            remain = big%small;
+        while (remain > 0) {
+            remain = big % small;
             big = small;
             small = remain;
         }
-        answer = a*b/big;
+        answer = a * b / big;
         return answer;
     }
 }

@@ -1,4 +1,5 @@
 package basicAlgorithms.programmers;
+
 /*
 포비와 크롱이 페이지 번호가 1부터 시작되는 400 페이지의 책을 주웠습니다.
  책을 살펴보니 왼쪽 페이지는 홀수, 오른쪽 페이지는 짝수 번호이고 모든 페이지에는 번호가 적혀있었습니다.
@@ -23,9 +24,9 @@ public class BookGame {
     public int solution(int[] pobi, int[] crong) {
         int answer = 0;
 
-        if((pobi[1] - pobi[0]) !=1 || (crong[1] - crong[0]) !=1){
+        if ((pobi[1] - pobi[0]) != 1 || (crong[1] - crong[0]) != 1) {
             answer = -1;
-        }else{
+        } else {
             int a = pobi[0];
             int b = pobi[1];
             int c = crong[0];

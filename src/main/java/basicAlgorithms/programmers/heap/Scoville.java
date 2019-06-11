@@ -1,24 +1,25 @@
 package basicAlgorithms.programmers.heap;
 
 import java.util.*;
+
 public class Scoville {
 
     public int solution(int[] scoville, int K) {
         int result = 0;
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        for(int i : scoville){
+        for (int i : scoville) {
             pq.add(i);
         }
 
         int n1 = 0;
         int n2 = 0;
         int n3 = 0;
-        while(true){
+        while (true) {
             if (pq.size() < 2 && pq.peek() < K) {
                 result = -1;
                 break;
             }
-            if(pq.peek()>=K){
+            if (pq.peek() >= K) {
                 break;
             }
             n1 = pq.poll();
@@ -31,7 +32,7 @@ public class Scoville {
         return result;
     }
 
-    }
+}
 
 
 

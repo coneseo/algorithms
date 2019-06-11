@@ -8,14 +8,15 @@ import java.util.Map;
 public class Necklace {
 
     public static void main(String[] args) {
-        int a[] = {4,3,2,1,0};
+        int a[] = {4, 3, 2, 1, 0};
         System.out.println(solution(a));
     }
-    public static int solution(int[] A){
+
+    public static int solution(int[] A) {
 
         Map<Integer, Boolean> mapNeck = new HashMap<>();
-        for(int i = 0; i< A.length ; i++){
-            mapNeck.put(i,false);
+        for (int i = 0; i < A.length; i++) {
+            mapNeck.put(i, false);
         }
 
 //        for(Map.Entry<Integer,Integer> e : mapNeck.entrySet()){
@@ -39,19 +40,17 @@ public class Necklace {
 //
 //            }
 //        }
-        int count  = 0;
-        for(int i = 0; i < A.length; i++){
-                int value = A[i];
-            for(int j = 0; j < A.length; j++){
-                if(value == A[j]){
+        int count = 0;
+        for (int i = 0; i < A.length; i++) {
+            int value = A[i];
+            for (int j = 0; j < A.length; j++) {
+                if (value == A[j]) {
                     continue;
-                }else{
-                    count ++;
+                } else {
+                    count++;
                 }
             }
         }
-
-
 
 
         return count;

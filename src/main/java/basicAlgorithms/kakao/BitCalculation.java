@@ -8,16 +8,16 @@ public class BitCalculation {
 
         String[] result = new String[n];
 
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             int arr = arr1[i] | arr2[i];
             System.out.println("" + Integer.toBinaryString(arr).replaceAll("1", "#").replaceAll("0", " "));
         }
         System.out.println("");
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             String resultString = "";
             int targetBit = 1;
             int arr = arr1[i] | arr2[i];
-            for(int j = 0; j < n; j++){
+            for (int j = 0; j < n; j++) {
                 resultString = ((arr & targetBit) > 0 ? "#" : " ") + resultString;
                 targetBit = targetBit << 1;
             }

@@ -15,17 +15,17 @@ public class Chung {
         String result = "";
 
         char[] carray = word.toCharArray();
-        for(int i = 0; i < carray.length; i++) {
-            if(Character.isUpperCase(carray[i])) {
-                int asc = (int)carray[i];
+        for (int i = 0; i < carray.length; i++) {
+            if (Character.isUpperCase(carray[i])) {
+                int asc = (int) carray[i];
                 int newAsc = 155 - asc;
                 Character.toString((char) newAsc);
-                carray[i] = (char)newAsc;
-            }else if(Character.isLowerCase(carray[i])) {
-                int asc = (int)carray[i];
+                carray[i] = (char) newAsc;
+            } else if (Character.isLowerCase(carray[i])) {
+                int asc = (int) carray[i];
                 int newAsc = 219 - asc;
-                 Character.toString((char) newAsc);
-                carray[i] = (char)newAsc;
+                Character.toString((char) newAsc);
+                carray[i] = (char) newAsc;
             }
         }
         result = new String(carray);

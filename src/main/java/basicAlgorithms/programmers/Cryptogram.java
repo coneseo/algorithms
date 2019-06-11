@@ -18,7 +18,7 @@ import java.util.List;
 
  */
 public class Cryptogram {
-    public String solution(String cryptogram){
+    public String solution(String cryptogram) {
         String answer = "";
         //문자열 배열로 바꿔서
         //연속으로 같은 문자열이 있으면 제거하는데,
@@ -29,7 +29,7 @@ public class Cryptogram {
         boolean isGood = true;
         int check = 0;
 
-        while(isGood) {
+        while (isGood) {
             for (int i = 0; i < list.size() - 1; i++) {
                 if (list.get(i).equals(list.get(i + 1))) {
                     list.remove(i);

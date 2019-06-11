@@ -7,25 +7,25 @@ public class LevelOneDivisorCorrect {
         int[] answer = new int[arr.length];
         int a = 0;
         int count = 0;
-        for(int num : arr){
-            if((num % divisor) == 0){
+        for (int num : arr) {
+            if ((num % divisor) == 0) {
                 answer[a++] = num;
                 count++;
             }
         }
-        if(count == 0){
+        if (count == 0) {
             answer[0] = -1;
-        }else{
+        } else {
             Arrays.sort(answer);
         }
         return answer;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         LevelOneDivisorCorrect lv = new LevelOneDivisorCorrect();
-        int[] arr = {5,9,7,10};
+        int[] arr = {5, 9, 7, 10};
         int div = 5;
-        int[] result =lv.solution(arr, div);
+        int[] result = lv.solution(arr, div);
         System.out.println(result.toString());
     }
 }

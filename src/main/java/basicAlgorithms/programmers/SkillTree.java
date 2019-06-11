@@ -3,22 +3,22 @@ package basicAlgorithms.programmers;
 import java.util.HashMap;
 
 public class SkillTree {
-    public int skillTree(String skill, String[] skill_trees){
+    public int skillTree(String skill, String[] skill_trees) {
         int answer = 0;
-        for(int i=0; i<skill_trees.length; i++){
+        for (int i = 0; i < skill_trees.length; i++) {
             int idx = 0;
             boolean flag = true;
-            for(int j=0; j< skill_trees[i].length(); j++){
-                for(int k=idx; k< skill.length(); k++){
-                    if(skill.charAt(k) == skill_trees[i].charAt(j)){
-                        if(k!=idx) flag = false;
-                        else{
+            for (int j = 0; j < skill_trees[i].length(); j++) {
+                for (int k = idx; k < skill.length(); k++) {
+                    if (skill.charAt(k) == skill_trees[i].charAt(j)) {
+                        if (k != idx) flag = false;
+                        else {
                             idx++;
                         }
                     }
                 }
             }
-            if(flag) answer++;
+            if (flag) answer++;
         }
 
         return answer;

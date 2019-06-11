@@ -30,14 +30,13 @@ public class NumberBaseball {
             if (flag) {
                 temp.add(num);
             }
-            flag =true;
+            flag = true;
         }
         return temp.size();
     }
 
 
-
-    public static int strike (String num, String target){
+    public static int strike(String num, String target) {
         int cnt = 0;
         for (int i = 0; i < target.length(); i++) {
             cnt = num.charAt(i) == target.charAt(i) ? cnt + 1 : cnt;
@@ -45,7 +44,7 @@ public class NumberBaseball {
         return cnt;
     }
 
-    public static int ball (String num, String target){
+    public static int ball(String num, String target) {
         int cnt = 0;
         for (int i = 0; i < target.length(); i++) {
             cnt = num.contains(String.valueOf(target.charAt(i))) ? cnt + 1 : cnt;

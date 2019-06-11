@@ -10,22 +10,22 @@ public class PairRemove {
     }
 
 
-    public static int solution(String s){
+    public static int solution(String s) {
         Stack<Character> stack = new Stack<>();
         char[] arr = null;
         arr = s.toCharArray();
         int answer = 0;
-        for(int i =0; i< arr.length; i++) {
-            if(stack.isEmpty()){
+        for (int i = 0; i < arr.length; i++) {
+            if (stack.isEmpty()) {
                 stack.push(arr[i]);
-            }else if(stack.peek().equals(arr[i])){
+            } else if (stack.peek().equals(arr[i])) {
                 stack.pop();
-            }else{
+            } else {
                 stack.push(arr[i]);
             }
         }
 
-        if(stack.size() == 0){
+        if (stack.size() == 0) {
             answer = 1;
         }
 

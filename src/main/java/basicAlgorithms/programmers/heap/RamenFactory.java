@@ -6,22 +6,23 @@ import java.util.PriorityQueue;
 public class RamenFactory {
     public static void main(String[] args) {
         int stock = 4;
-        int[] dates = {7,12,23};
-        int[] supplies = {20,5,10};
+        int[] dates = {7, 12, 23};
+        int[] supplies = {20, 5, 10};
         int k = 30;
-        int result = solution(stock, dates, supplies,k);
+        int result = solution(stock, dates, supplies, k);
         System.out.println(result);
     }
-    public  static int solution(int stock, int[] dates, int[] supplies, int k){
+
+    public static int solution(int stock, int[] dates, int[] supplies, int k) {
         int answer = 0;
         int index = 0;
         int index2 = 0;
         int st = stock;
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
-        while(st < k){
-            for(int i = index; i < dates.length; i++){
-                if(dates[i] <= st){
+        while (st < k) {
+            for (int i = index; i < dates.length; i++) {
+                if (dates[i] <= st) {
                     pq.offer(supplies[i]);
                     index2 = i;
                 }
@@ -31,6 +32,6 @@ public class RamenFactory {
             answer++;
         }
 
-        return  answer;
+        return answer;
     }
 }

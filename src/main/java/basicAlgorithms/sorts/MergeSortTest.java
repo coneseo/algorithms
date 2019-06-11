@@ -1,21 +1,21 @@
 package basicAlgorithms.sorts;
 
 public class MergeSortTest {
-    private static void mergeSort(int[] arr){
+    private static void mergeSort(int[] arr) {
         //mergesort는 저장공간이 필요하다. 그래서 입력받는 배열의 크기 만큼 임시 공간을 만들어준다.
         int[] tmp = new int[arr.length];
         //정렬할 배열, 임시 저장소, 시작과 끝 index를 넘겨줘서 본격적인 재귀호출을 시작한다.
-        mergeSort(arr, tmp, 0, arr.length -1 );
+        mergeSort(arr, tmp, 0, arr.length - 1);
     }
 
     private static void mergeSort(int[] arr, int[] tmp, int start, int end) {
         //시작 인덱스가 끝 인덱스보다 작은 동안만 호출을 할 것이다.
-        if(start < end){
+        if (start < end) {
             int mid = (start + end) / 2;
             //배열의 앞 부분으로 start와 end 포인트를 조정해서 호출하고
             mergeSort(arr, tmp, start, mid);
             //배열의 뒷 부분을 호출한다.
-            mergeSort(arr, tmp, mid +1, end );
+            mergeSort(arr, tmp, mid + 1, end);
             //재귀함수가 돌아왔을 때는 가운데를 기준으로 왼, 오른쪽이 정렬이 되어있는 상태겠죠?
             //그러면 merge 함수로 두 개로 나뉜 방을 합친다. 
             merge(arr, tmp, start, mid, end);
@@ -55,18 +55,18 @@ public class MergeSortTest {
             arr[index + i] = tmp[part1 + i];
         }
     }
-        //뒤쪽 배열은 최종 배열의 뒤쪽에 이미 자리하고있기때문에 뒤쪽에 남은 데이터는 신경안써도 된다.
+    //뒤쪽 배열은 최종 배열의 뒤쪽에 이미 자리하고있기때문에 뒤쪽에 남은 데이터는 신경안써도 된다.
 
-        private static void printAway(int[] arr){
-            for(int data : arr){
-                System.out.print(data + ",");
-            }
-            System.out.println();
+    private static void printAway(int[] arr) {
+        for (int data : arr) {
+            System.out.print(data + ",");
         }
+        System.out.println();
+    }
 
 
     public static void main(String[] args) {
-        int[] arr = {3,6,2,8,4,11,7,1,9,10};
+        int[] arr = {3, 6, 2, 8, 4, 11, 7, 1, 9, 10};
         printAway(arr);
         mergeSort(arr);
         printAway(arr);

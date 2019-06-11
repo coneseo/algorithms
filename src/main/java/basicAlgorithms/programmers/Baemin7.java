@@ -1,7 +1,7 @@
 package basicAlgorithms.programmers;
 
 public class Baemin7 {
-        public String solution(String cryptogram) {
+    public String solution(String cryptogram) {
         StringBuilder str = new StringBuilder(cryptogram);
         String answer = "";
         int length = str.length();
@@ -25,5 +25,5 @@ public class Baemin7 {
         System.out.println(result);
     }
 
-    }
+}
 

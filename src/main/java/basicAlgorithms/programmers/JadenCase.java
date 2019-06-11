@@ -9,18 +9,18 @@ public class JadenCase {
 
     }
 
-    public static String solution(String s){
+    public static String solution(String s) {
         String answer = "";
-        String[] temp  = s.split("");
+        String[] temp = s.split("");
         boolean check = true;
 
-        for(int i=1; i< temp.length; i++){
-            if(temp[i].equals(" ")){
+        for (int i = 1; i < temp.length; i++) {
+            if (temp[i].equals(" ")) {
                 check = false;
-            }else if(check == false){
+            } else if (check == false) {
                 temp[i].toUpperCase();
                 check = true;
-            }else{
+            } else {
                 temp[i].toLowerCase();
             }
         }

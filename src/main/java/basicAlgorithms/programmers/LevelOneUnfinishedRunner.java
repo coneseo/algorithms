@@ -17,19 +17,19 @@ public class LevelOneUnfinishedRunner {
     [marina, josipa, nikola, vinko, filipa]	[josipa, filipa, marina, nikola]	vinko
     [mislav, stanko, mislav, ana]	[stanko, ana, mislav]	mislav
      */
-    public String solution(String[] participant, String[] completion){
+    public String solution(String[] participant, String[] completion) {
         Arrays.sort(participant);
         Arrays.sort(completion);
         String answer = "";
 
-        for(int i=0; i < completion.length; i++){
-            if(!completion[i].equals(participant[i])){
+        for (int i = 0; i < completion.length; i++) {
+            if (!completion[i].equals(participant[i])) {
                 answer = participant[i];
                 break;
             }
         }
 
-        if(answer.equals("")){
+        if (answer.equals("")) {
             answer = participant[participant.length - 1];
         }
 
@@ -40,9 +40,9 @@ public class LevelOneUnfinishedRunner {
         Arrays.sort(participant);
         Arrays.sort(completion);
         int i;
-        for ( i=0; i<completion.length; i++){
+        for (i = 0; i < completion.length; i++) {
 
-            if (!participant[i].equals(completion[i])){
+            if (!participant[i].equals(completion[i])) {
                 return participant[i];
             }
         }
@@ -56,12 +56,13 @@ public class LevelOneUnfinishedRunner {
         for (String player : completion) hm.put(player, hm.get(player) - 1);
 
         for (String key : hm.keySet()) {
-            if (hm.get(key) != 0){
+            if (hm.get(key) != 0) {
                 answer = key;
             }
         }
         return answer;
     }
+
     public static void main(String[] args) {
         String[] arrP = {"leo", "kiki", "eden"};
         String[] arrC = {"eden", "kiki"};
