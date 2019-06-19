@@ -13,4 +13,15 @@ public class KiwiJuiceEasy {
         }
         return bottles;
     }
+
+    public int[] thePouring2(int[] capacities, int[] bottles, int[] fromId, int[] told){
+        for(int i=0; i<fromId.length; i++){
+            int sum = bottles[fromId[i] + bottles[told[i]]];
+            bottles[told[i]]  = Math.min(sum, capacities[told[i]]);
+            bottles[fromId[i]] = sum - bottles[told[i]];
+        }
+
+        return bottles;
+        
+    }
 }
