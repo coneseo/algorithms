@@ -1,5 +1,7 @@
 package basicAlgorithms.backjun;
 
+import java.util.Scanner;
+
 public class Backjoon9095 {
     public static void main(String[] args) {
         int[] arr = new int[11];
