@@ -29,7 +29,7 @@ public class Cryptography {
     //이런 경우에는 가장 작은 수를 증가시키면 최대 곱이 나온다고 한다.
     //간단하게 증명하면 +1 하면 곱의 증가율이 (n+1)/n이다.
     //그래서 정렬을 한 다음에 가장 작은 수에 +1을 하고
-    //for문을 한번만 돌면 가장 큰 곱이 나온다. 
+    //for문을 한번만 돌면 가장 큰 곱이 나온다.
     public long encryptWithSort(int[] numbers){
         long ret = 1;
         Arrays.sort(numbers);
