@@ -1,5 +1,7 @@
 package topcoder;
 
+import java.util.LinkedList;
+
 public class BfsdfsExample {
   //재귀함수
   int fib(int a) {
@@ -31,5 +33,20 @@ public class BfsdfsExample {
       if(next가 조건을 만족하는 경우) ret = Math.max(dfx(next), ret);
     }
     return ret;
+  }
+
+  Queue<T> q = new LinkedList<T>();
+  q.add(초기 상);태
+  while(!q.isEmpty()){
+    T now = q.poll();
+    try {
+      현재상태를 처리한다
+          for(int i = 0; i < 다음 상태 개수; i++){
+            T next = i번째 다음 상태;
+            if(next를 방문했었는지 판정) q.add(next);
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 }
