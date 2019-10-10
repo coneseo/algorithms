@@ -3,13 +3,14 @@ package topcoder;
 import java.util.LinkedList;
 
 public class BfsdfsExample {
+
   //재귀함수
   int fib(int a) {
     if (a <= 1)
       return 1;
     return fib(a - 1) + fib(a - 2);
   }
-
+}
   //깊이 우선 탐색
 
 //  루트 노드(혹은 다른 임의의 노드)에서 시작해서 다음 분기(branch)로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법
@@ -25,37 +26,37 @@ public class BfsdfsExample {
 //  이 알고리즘을 구현할 때 가장 큰 차이점은, 그래프 탐색의 경우 어떤 노드를 방문했었는지 여부를 반드시 검사 해야 한다는 것이다.
 //  이를 검사하지 않을 경우 무한루프에 빠질 위험이 있다.
 
-  int dfs(int now){
-    if(현재 상태 now 가 끝나는 조건) return 현재 상태 now의 값;
-    int ret = -1;
-    for(int i = 0; i < 다음 상태 개수; i++){
-      int next = i번째 다음 상태;
-      if(next가 조건을 만족하는 경우) ret = Math.max(dfx(next), ret);
-    }
-    return ret;
-  }
+//  int dfs(int now){
+//    if(현재 상태 now 가 끝나는 조건) return 현재 상태 now의 값;
+//    int ret = -1;
+//    for(int i = 0; i < 다음 상태 개수; i++){
+//      int next = i번째 다음 상태;
+//      if(next가 조건을 만족하는 경우) ret = Math.max(dfx(next), ret);
+//    }
+//    return ret;
+//  }
+//
+//  Queue<T> q = new LinkedList<T>();
+//  q.add(초기 상);태
+//  while(!q.isEmpty()){
+//    T now = q.poll();
+//    try {
+//      현재상태를 처리한다
+//          for(int i = 0; i < 다음 상태 개수; i++){
+//            T next = i번째 다음 상태;
+//            if(next를 방문했었는지 판정) q.add(next);
+//      }
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
+//  }
+//
+//  깊이 우선 탐색을 사용하면 좋은 경우
+//      - 모든 경로를 탐색하고 결과를 확인해야 하는 경우
+//      - 문자열 등을 탐색할 때 "사전순서로 앞에 오는 것"처럼 앞부터 검색해서 찾는 것이 빠른 경우
+//  너비 우선 탐색을 사용하면 좋은 경우
+//      - 시작 지점에서 가장 가까운 것을 구하고 싶은 경우
+//      - 탐색 범위 자체는 넒지만 어느 정도 근처에 구하고 싶은 해가 존재하는 것을 알고 있는 경우
+//      - 탐색 법위가 굉장히 넓으며 깊이 우선 탐색을 사용할 때는 스택이 대량으로 사용되는 경우
 
-  Queue<T> q = new LinkedList<T>();
-  q.add(초기 상);태
-  while(!q.isEmpty()){
-    T now = q.poll();
-    try {
-      현재상태를 처리한다
-          for(int i = 0; i < 다음 상태 개수; i++){
-            T next = i번째 다음 상태;
-            if(next를 방문했었는지 판정) q.add(next);
-      }
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
 
-  깊이 우선 탐색을 사용하면 좋은 경우
-      - 모든 경로를 탐색하고 결과를 확인해야 하는 경우
-      - 문자열 등을 탐색할 때 "사전순서로 앞에 오는 것"처럼 앞부터 검색해서 찾는 것이 빠른 경우
-  너비 우선 탐색을 사용하면 좋은 경우
-      - 시작 지점에서 가장 가까운 것을 구하고 싶은 경우
-      - 탐색 범위 자체는 넒지만 어느 정도 근처에 구하고 싶은 해가 존재하는을 알고 있는 경우것
-      - 탐색 법위가 굉장히 넓으며 깊이 우선 탐색을 사용할 때는 스택이 대량으로 사용되는 경우
-
-}
