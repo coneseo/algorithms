@@ -21,5 +21,14 @@ public class MazeMaker {
     queueX.add(startCol);
     queueY.add(startRow);
 
+    while( !queueX.isEmpty()){
+      int x = queueX.poll(),
+          y = queueY.poll();
+
+      for(int i = 0; i < moveRow.length; i++){
+        int nextX = x + moveCol[i],
+            nextY = y + moveRow[i];
+      }
+    }
   }
 }
