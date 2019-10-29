@@ -1,5 +1,8 @@
 package topcoder;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class MazeMaker {
   public int longestPath(String[] maze, int startRow, int startCol,
       int[] moveRow, int[] moveCol){
@@ -11,5 +14,12 @@ public class MazeMaker {
     for(int i = 0; i < height; i++)
       for(int j = 0; j < width; j++)
         board[i][j] = -1;
+    board[startRow][startCol] = 0;
+
+    Queue<Integer> queueX = new LinkedList<Integer>();
+    Queue<Integer> queueY = new LinkedList<Integer>();
+    queueX.add(startCol);
+    queueY.add(startRow);
+
   }
 }
