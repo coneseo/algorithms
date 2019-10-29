@@ -28,7 +28,25 @@ public class MazeMaker {
       for(int i = 0; i < moveRow.length; i++){
         int nextX = x + moveCol[i],
             nextY = y + moveRow[i];
+
+        if( 0<= nextX && nextX < width &&
+        0 <= nextY && nextY < height &&
+        board[nextY][nextX] == -1 &&
+        maze[nextY].charAt(nextX) == '.'){
+          board[nextY][nextX] = board[y][x] + 1;
+          queueX.add(nextX);
+          queueY.add(nextY);
+        }
       }
     }
+
+    for(int i = 0; i < height; i++){
+      for(int j = 0; j < width; j++){
+        if(maze[i].charAt(j) == '.' && board[i][j] == -1)
+          return -1;
+        max = Math.max(max,board[i][j]);
+      }
+    }
+    return max;
   }
 }
