@@ -1,5 +1,5 @@
 package topcoder;
-
+//카탈랑 수
 public class HandShaking {
   public long countPerfect(int n){
     long[] dp = new long[n/2+1];
