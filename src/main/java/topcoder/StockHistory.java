@@ -12,5 +12,12 @@ public class StockHistory {
     double[] promotion = new double[ month - 1 ];
     boolean[] buy = new boolean[month -1 ];
 
+    //처리하기 쉽게 숫자 배열로 변환
+    for(int i = 0; i < month; i++){
+      String[] s = stockPrices[i].split(" ");
+      for(int j = 0; j < corp; j++){
+        prices[i][j] = Integer.valueOf(s[j]);
+      }
+    }
   }
 }
