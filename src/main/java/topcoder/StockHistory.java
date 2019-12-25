@@ -40,6 +40,10 @@ public class StockHistory {
         profit += money + proportion[i];
         money = 0;
       }
+      money += monthlyContribution;
     }
+
+    return (int)Math.round(profit);
   }
+
 }
