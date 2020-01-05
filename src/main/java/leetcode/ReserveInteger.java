@@ -35,4 +35,26 @@ public class ReserveInteger {
     long res = Long.parseLong(result);
     return (int)res;
   }
+
+  public int reverse2(int x){
+    long reversed = 0;
+    int sign = x<0?-1:1;
+    x = x<0? x*-1:x;
+
+    try{
+      for (int pow = 1; x>0; x/=10){
+        reversed = reversed * 10 + (x % 10);
+      }
+    }
+    catch (Exception e){
+      return 0;
+    }
+    finally {
+      if((reversed * sign)>0 && reversed*sign > (long)Integer.MAX_VALUE)
+        return 0;
+      if((reversed * sign)<0 && reversed*sign < (long)Integer.MIN_VALUE)
+        return 0;
+      return (int) (reversed*sign);
+    }
+  }
 }
