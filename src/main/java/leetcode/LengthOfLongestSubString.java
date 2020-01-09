@@ -1,6 +1,7 @@
 package leetcode;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class LengthOfLongestSubString {
   public int lengthOfLongestSubstring(String s) {
@@ -35,4 +36,34 @@ public class LengthOfLongestSubString {
     }
     return Math.max(res, i - j);
   }
+
+  //solve with hashmap
+  public int lengthOfLongestSubstring3(String s){
+    if(s == null || s == "") return 0;
+    HashMap<Character, Integer> map = new HashMap<>();
+    int max = 0;
+    int idx = 0;
+    int start = 0;
+
+    while(idx < s.length()){
+      Character c = s.charAt(idx);
+      if(map.containsKey(c) && map.get(c) >= start){
+        int length = idx - start;
+        start = map.get(c) + 1;
+        map.put(c,idx);
+        max = length > max ? length:max;
+      }
+      else{
+        map.put(c, idx);
+      }
+      idx++;
+    }
+
+    if(s.length() - start > max)
+      max = s.length() - start;
+
+    return max;
+  }
+
+
 }
