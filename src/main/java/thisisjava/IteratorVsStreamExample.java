@@ -33,6 +33,8 @@ public class IteratorVsStreamExample {
     count = 0;
     count = list.stream().filter(x -> x.contains("o")).count();
     System.out.println("Count:"+count);
+
+    list.parallelStream().map((x) ->{return x.concat("S");}).forEach(x -> System.out.println(x));
   }
 
 }
