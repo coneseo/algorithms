@@ -1,5 +1,6 @@
 package thisisjava;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -35,6 +36,14 @@ public class IteratorVsStreamExample {
     System.out.println("Count:"+count);
 
     list.parallelStream().map((x) ->{return x.concat("S");}).forEach(x -> System.out.println(x));
+
+    //noneMatch
+    List<Integer> ages = new ArrayList<Integer>();
+    ages.add(1);ages.add(2);ages.add(3);//1,2,3
+    System.out.println(ages.stream().filter(x -> x>1).noneMatch(x->x>2));//false
+
+
+
   }
 
 }
