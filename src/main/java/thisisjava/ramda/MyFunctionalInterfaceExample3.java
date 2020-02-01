@@ -1,4 +1,4 @@
-package thisisjava;
+package thisisjava.ramda;
 
 import static java.lang.Integer.sum;
 

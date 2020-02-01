@@ -1,4 +1,4 @@
-package thisisjava;
+package thisisjava.ramda;
 
 public class MyFunctionalInterfaceExample {
   public interface MyFunctionalInterface{

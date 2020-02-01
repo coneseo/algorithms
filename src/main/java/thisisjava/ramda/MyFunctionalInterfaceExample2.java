@@ -1,4 +1,4 @@
-package thisisjava;
+package thisisjava.ramda;
 
 public class MyFunctionalInterfaceExample2 {
   //매개 변수가 있고 리턴값이 없는 추상 메소드를 가진 함수적 인터페이스 선언
