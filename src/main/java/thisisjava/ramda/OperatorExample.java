@@ -12,4 +12,17 @@ public class OperatorExample {
     }
     return result;
   }
+
+  public static void main(String[] args) {
+    //최대값 얻기
+    int max = maxOrMin(
+        (a,b) -> {
+          if(a>=b) return a;
+          else return b;
+        }
+    );
+    System.out.println("최대값 : "+max);
+
+    //
+  }
 }
