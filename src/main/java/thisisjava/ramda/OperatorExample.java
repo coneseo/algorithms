@@ -23,6 +23,15 @@ public class OperatorExample {
     );
     System.out.println("최대값 : "+max);
 
-    //
+    //최소값 얻기
+    int min = maxOrMin(
+        (a,b) -> {
+          if (a <= b)
+            return a;
+          else
+            return b;
+        }
+    );
+    System.out.println("최소값 : "+min);
   }
 }
