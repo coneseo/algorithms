@@ -11,10 +11,13 @@ public class UsingThis {
 
     void method(){
       //람다식
-      MyFunctionalInterface if = () ->{
+      MyFunctionalInterface fi = () ->{
         System.out.println("outterField : "+outterField);
-
-      }
+        System.out.println("outterField : "+UsingThis.this.outterField + "\n");
+        System.out.println("innerField : "+innerField);
+        System.out.println("innerField : "+this.innerField + "\n");
+      };
+      fi.method();
     }
   }
 }
