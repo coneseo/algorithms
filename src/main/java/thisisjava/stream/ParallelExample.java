@@ -20,4 +20,6 @@ public class ParallelExample {
   public static void print(String str){
     System.out.println(str + " : "+Thread.currentThread().getName());
   }
+
+
 }
