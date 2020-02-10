@@ -11,6 +11,6 @@ public class FromDirectoryExample {
   public static void main(String[] args) throws IOException {
     Path path = Paths.get("/Users/seocheong-won/Documents/dev/algorithms/src/main/java/thisisjava/stream");
     Stream<Path> stream = Files.list(path);
-    stream.forEach(p ->);
+    stream.forEach(p -> System.out.println(p.getFileName()));
   }
 }
