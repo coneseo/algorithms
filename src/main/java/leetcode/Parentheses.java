@@ -7,5 +7,14 @@ public class Parentheses {
     if(length%2 > 0){
       return false;
     }
+    boolean flag = false;
+    for(String a : array){
+      if(a.equals("{") && a.equals("[") && flag == false){
+        flag = true;
+      }else if(a.equals("}") && a.equals("]") && flag == true){
+        flag = false;
+      }
+    }
+    return flag;
   }
 }
