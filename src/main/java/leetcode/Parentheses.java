@@ -10,6 +10,7 @@ public class Parentheses {
     boolean valid = parentheses.isValid2(s);
 
   }
+
   public boolean isValid(String s) {
     String[] array = s.split("");
     int length = array.length;
@@ -42,7 +43,37 @@ public class Parentheses {
             return false;
       }
     }
-
     return st.empty();
   }
+
+  public boolean isValid3(String s) {
+    Stack p = new Stack();
+    for(int i=0;i<s.length();i++)
+    {
+
+      if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i)=='[')
+        p.push(s.charAt(i));
+      else
+      {
+        if(p.isEmpty())
+          return false;
+        else{
+          if(s.charAt(i)==')' && p.pop()!='(') {
+            return false;
+          }
+          if(s.charAt(i)=='}' && p.pop()!='{') {
+            return false;
+          }
+          if(s.charAt(i)==']' && p.pop()!='[') {
+            return false;
+          }
+
+        }
+      }
+    }
+    if(p.isEmpty())
+      return true;
+    return false;
+  }
+
 }
