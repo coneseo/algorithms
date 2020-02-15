@@ -50,7 +50,6 @@ public class Parentheses {
     Stack p = new Stack();
     for(int i=0;i<s.length();i++)
     {
-
       if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i)=='[')
         p.push(s.charAt(i));
       else
@@ -67,12 +66,10 @@ public class Parentheses {
           if(s.charAt(i)==']' && p.pop()!='[') {
             return false;
           }
-
         }
       }
     }
-    if(p.isEmpty())
-      return true;
+    if(p.isEmpty()) return true;
     return false;
   }
 
