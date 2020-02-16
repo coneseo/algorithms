@@ -57,15 +57,15 @@ public class Parentheses {
         if(p.isEmpty())
           return false;
         else{
-          if(s.charAt(i)==')' && p.pop()!='(') {
-            return false;
-          }
-          if(s.charAt(i)=='}' && p.pop()!='{') {
-            return false;
-          }
-          if(s.charAt(i)==']' && p.pop()!='[') {
-            return false;
-          }
+//          if(s.charAt(i)==')' && p.pop()!='(') {
+//            return false;
+//          }
+//          if(s.charAt(i)=='}' && p.pop()!='{') {
+//            return false;
+//          }
+//          if(s.charAt(i)==']' && p.pop()!='[') {
+//            return false;
+//          }
         }
       }
     }
