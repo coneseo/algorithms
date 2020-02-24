@@ -24,7 +24,7 @@ public class SortingExample {
     studentList.stream().sorted().forEach(s -> System.out.println(s.getScore()+","));
     System.out.println();
 
-    studentList.stream().sorted(Comparator.reverseOrder()).forEach(s -> System.out.println(s.getScore()+","));
+   // studentList.stream().sorted(Comparator.reverseOrder()).forEach(s -> System.out.println(s.getScore()+","));
 
   }
 }
