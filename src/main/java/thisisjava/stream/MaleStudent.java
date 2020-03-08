@@ -22,7 +22,7 @@ public class MaleStudent {
     System.out.println("["+Thread.currentThread().getName()+"] combine()");
   }
 
-  private List<Student> getList() {
+  List<Student> getList() {
     return list;
   }
 }
