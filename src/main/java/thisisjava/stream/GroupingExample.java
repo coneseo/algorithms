@@ -20,5 +20,24 @@ public class GroupingExample {
 
     System.out.println("[남학생]");
     mapBySex.get(Sex.MALE).stream().forEach(s -> System.out.println(s.getName() + " "));
+
+    System.out.println("[여학생]");
+    mapBySex.get(Sex.FEMALE).stream().forEach(s -> System.out.println(s.getName() + " "));
+
+    System.out.println();
+
+    Map<Student.City, List<String>> mapByCity = totalList.stream()
+        .collect(
+            Collectors.groupingBy(
+                Student::getCity,
+                Collectors.mapping(Student::getName, Collectors.toList())
+            )
+        );
+
+    System.out.println("\n[서울]");
+    mapByCity.get(City.Seoul).stream().forEach(s-> System.out.println(s + " "));
+
+    System.out.println("\n[부산]");
+    mapByCity.get(City.Pusan).stream().forEach(s -> System.out.println(s + " "));
   }
 }
