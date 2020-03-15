@@ -27,5 +27,20 @@ public class GroupingAndReductionExample {
 
     System.out.println("남학생 평균 점수 : "+mapBySex.get(Sex.MALE));
     System.out.println("여학생 평균 점수 : "+mapBySex.get(Sex.FEMALE));
+
+    //성별을 쉼표로 구분한 이름을 저장하는 Map 얻기
+    Map<Student.Sex, String> mapByName = totalList.stream()
+        .collect(
+            Collectors.groupingBy(
+                Student :: getSex,
+                Collectors.mapping(
+                    Student::getName,
+                    Collectors.joining(",")
+                )
+            )
+        );
+
+    System.out.println("남학생 전체 이름 : "+mapByName.get(Sex.MALE));
+    System.out.println("여학생 전체 이름 : "+mapByName.get(Sex.FEMALE));
   }
 }
