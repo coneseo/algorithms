@@ -10,7 +10,18 @@ public class InterestingParty2 {
   가장 많은 것을 답하세요 -> 라는 문제를 보면 직감적으로 전체 탐색을 머리 속에 떠올려야 한다.
    */
   public int bestInvitation(String[] first, String[] second){
-
+    int check = 0;
+    for(int i = 0; i < first.length; i++){
+      int f = 0;
+      int s = 0;
+      for(int j = 0; j < first.length; j++){
+        if(first[i].equals(first[j])) f++;
+        if(first[i].equals(second[j])) f++;
+        if(second[i].equals(first[j])) s++;
+        if(second[i].equals(second[j])) s++;
+      }
+      check = Math.max()
+    }
   }
 
   /*
