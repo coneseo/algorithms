@@ -1,5 +1,7 @@
 package topcoder;
 
+import java.util.Arrays;
+
 public class Cryptography2 {
   /*
   새로운 암호화 시스템을 개발한다. 이 시스템은 암호화하려고 숫자 리스트를 입력받는다.
@@ -18,6 +20,20 @@ public class Cryptography2 {
         }
       }
       ans = Math.max(mul, ans);
+    }
+    return ans;
+  }
+
+  /*
+  간단한 수학적 지식 : 숫자를 탐색하지 않아도 어떤 숫자를 선택해야할지 알 수 있다. 가장 작은 숫자에 +1하면 된다.
+  간단한 증명을 하면 +1 하면 곱의 증가율이 (n+1)/n이다. 따라서 n이 작으면 작을수록 값이 커진다.
+   */
+  public long encrypt2(int[] numbers){
+    Arrays.sort(numbers);
+    numbers[0]++;
+    long ans = 1;
+    for(int i=0; i<numbers.length; i++){
+      ans *= numbers[i];
     }
     return ans;
   }
