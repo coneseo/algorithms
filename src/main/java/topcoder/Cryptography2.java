@@ -7,9 +7,9 @@ public class Cryptography2 {
   int[] numbers 형태로 숫자 배열이 주어질 때 곱의 최댓값을 리턴하시오. 리턴값이 2^62를 넘는 문제는 나오지 않는다.
    */
   public long encrypt(int[] numbers){
-    int ans = 0;
+    long ans = 0;
     for(int i = 0; i < numbers.length; i++){
-      int mul = 1;
+      long mul = 1;
       for(int j = 0; j < numbers.length; j++){
         if(j == i){
           mul *= (numbers[j]+1);
@@ -24,7 +24,7 @@ public class Cryptography2 {
 
   public static void main(String[] args) {
     Cryptography2 cryptography2 = new Cryptography2();
-    int[] array = {1,1,1,1};
+    int[] array = {1000,999,998,997, 996, 995};
     long encrypt = cryptography2.encrypt(array);
     System.out.println(encrypt);
   }
