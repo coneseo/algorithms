@@ -1,5 +1,8 @@
 package topcoder;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Recursive {
   int fib(int a){
     if(a <= 1) return 1;
@@ -16,4 +19,21 @@ public class Recursive {
 ////    }
 ////    return net;
 //  }
+
+  public static void main(String[] args) {
+    /*
+    Queue<T> q = new LinkedList();
+    q.add('초기상태');
+    while(!q.isEmpty()){
+      T now = q.poll();
+      현재상태를 처리합니다.
+      for(int i = 0; i < 다음 상태 개수; i++){
+        T next = i번째 다음 상태;
+        if(next를 방문했었는지 판정)
+          q.add(next);
+      }
+    }
+     */
+
+  }
 }
